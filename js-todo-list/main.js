@@ -4,4 +4,10 @@ document.addEventListener('DOMContentLoaded', function(){
     console.log(e.currentTarget)
     e.target.classList.toggle('checked')
   })
+
+  document.querySelectorAll('.close').forEach(
+    target => target.addEventListener('click', (e) => {
+      e.target.parentNode.remove()
+    })
+  )
 })
